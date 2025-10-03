@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <h2>Welcome to your Profile</h2>
+    <div>
+        <p><strong>Name:</strong> <span th:text="${#authentication.principal.username}"></span></p>
+        <!-- Assuming we can get user details, for now just email -->
+        <p><strong>Email:</strong> <span th:text="${#authentication.principal.username}"></span></p>
+    </div>
+    <a th:href="@{/logout}">Logout</a>
+</body>
+</html>
